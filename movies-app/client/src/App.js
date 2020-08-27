@@ -21,6 +21,7 @@ class App extends React.Component {
           <Header />
           <div className="container">
             <Route exact path='/' component={Home} />
+            <Route exact path='/movies' render={() => <MovieList auth={this.state.auth} />} />
           </div>
           <Footer />
         </div>

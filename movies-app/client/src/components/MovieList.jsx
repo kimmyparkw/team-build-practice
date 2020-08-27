@@ -22,7 +22,9 @@ class MovieList extends React.Component {
 
     renderMovieList = () => {
         if (this.state.dataLoaded) {
-            return <h1>Our movie list</h1>
+            return this.state.movies.map((movie) => {
+                return <Movie key={movie.id} movie={movie}/>
+            })
         } else {
             return <p>Loading...</p>
         }
