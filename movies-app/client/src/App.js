@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Home from './components/Home.jsx'
 import Footer from './components/Footer.jsx'
-import MovieList from './components/MovieList.jsx'
+// import MovieList from './components/MovieList.jsx'
+import Login from './components/Login.jsx'
+import Register from './components/Register.jsx'
+import Dashboard from './components/Dashboard.jsx'
 
 class App extends React.Component {
   constructor() {
@@ -97,7 +100,7 @@ class App extends React.Component {
               ? <Redirect to='/login' />
               : <Dashboard user={this.state.user} />
             )} />
-            <Route exact path='/movies' render={() => <MovieList auth={this.state.auth} />} />
+            {/* <Route exact path='/movies' render={() => <MovieList auth={this.state.auth} />} /> */}
           </div>
           <Footer />
         </div>

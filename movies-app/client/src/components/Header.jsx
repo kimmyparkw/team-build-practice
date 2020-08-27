@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { PromiseAdapter } from 'pg-promise'
 
-function Header() {
+function Header(props) {
     return (
         <header>
             <nav>
