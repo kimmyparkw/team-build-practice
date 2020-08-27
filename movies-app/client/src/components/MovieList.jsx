@@ -21,6 +21,7 @@ class MovieList extends React.Component {
         fetch('api/movies', { credentials: 'include' })
         .then(res => res.json())
         .then(res => {
+            console.log(res)
             this.setState({
                 movies: res.data.movies,
                 dataLoaded: true,
