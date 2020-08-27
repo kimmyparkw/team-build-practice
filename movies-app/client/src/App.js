@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Home from './components/Home.jsx'
 import Footer from './components/Footer.jsx'
+import MovieList from './components/MovieList.jsx'
 
 class App extends React.Component {
   constructor() {
