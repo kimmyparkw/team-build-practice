@@ -1,4 +1,3 @@
-
 require('dotenv').config()
 const DB_NAME = process.env.DB_NAME || "movies_p3_dev";
 
