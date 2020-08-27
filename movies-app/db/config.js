@@ -1,4 +1,4 @@
-const pgp = require('pg-promise')(options);
+
 require('dotenv').config()
 const DB_NAME = process.env.DB_NAME || "movies_p3_dev";
 
@@ -7,7 +7,7 @@ const options = {
         console.log(e.query);
     }
 }
-
+const pgp = require('pg-promise')(options);
 
 function setDatabase() {
     if(process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {

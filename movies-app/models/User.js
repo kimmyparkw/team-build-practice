@@ -8,7 +8,7 @@ class User {
         this.password_digest = password_digest;
     }
 
-    static findByUserName() {
+    static findByUserName(username) {
         return db.oneOrNone(`
         SELECT * FROM users WHERE username = $1
         `, username)
