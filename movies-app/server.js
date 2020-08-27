@@ -50,7 +50,7 @@ app.use('/api/movies', moviesRoutes)
 //Error handlers
 app.use('*', (req, res) => {
     res.status(400).json({
-        message: 'Not Found!'
+        message: 'Not Found!!'
     })
 })
 
