@@ -41,7 +41,7 @@ movieController.create = (req, res, next) => {
     .catch(next);
 };
 
-movieController.update = (req, res, nezxt) => {
+movieController.update = (req, res, next) => {
     Movie.getById(req.params.id)
     .then((movie) => 
     movie.update({

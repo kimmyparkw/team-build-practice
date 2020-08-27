@@ -11,7 +11,7 @@ class Movie {
 
     static getAll() {
         return db
-        .manyOrNone(`SELECTED * FROM movies ORDER BY id ASC`)
+        .manyOrNone(`SELECT * FROM movies ORDER BY id ASC`)
         .then((movies) => movies.map((movie) => new this(movie)));
     }
 

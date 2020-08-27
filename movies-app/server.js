@@ -44,8 +44,8 @@ app.get('/', (req, res) => {
 //temporarily commented out until backend ready
 // const authRoutes = require('./routes/auth-routes')
 // app.use('/api/auth', authRoutes)
-// const moviesRoutes = require('./routes/movies-routes')
-// app.use('/api/movies', moviesRoutes)
+const moviesRoutes = require('./routes/movies-routes')
+app.use('/api/movies', moviesRoutes)
 
 //Error handlers
 app.use('*', (req, res) => {
