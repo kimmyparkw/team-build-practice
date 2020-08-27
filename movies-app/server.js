@@ -33,3 +33,31 @@ const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
+
+//ROUTES
+
+//Root Route
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
+//temporarily commented out until backend ready
+// const authRoutes = require('./routes/auth-routes')
+// app.use('/api/auth', authRoutes)
+// const moviesRoutes = require('./routes/movies-routes')
+// app.use('/api/movies', moviesRoutes)
+
+//Error handlers
+app.use('*', (req, res) => {
+    res.status(400).json({
+        message: 'Not Found!'
+    })
+})
+
+app.use((err, req, res, next) => {
+    console.log(err)
+    res.status(500).json({
+        error: err,
+        message: err.message
+    })
+})
